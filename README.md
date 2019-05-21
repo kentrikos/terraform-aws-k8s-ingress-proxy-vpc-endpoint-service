@@ -19,8 +19,8 @@ module "vpc-endpoint-services-nlb" {
   nlb_name    = "${var.nlb_name}"
   nlb_subnets = "${var.nlb_subnets}"
 
-  k8s_ingress_service_nodeport_http = "${var.k8s_ingress_service_nodeport_http}"
-  k8s_workers_asg_names             = "${var.k8s_workers_asg_names}"
+  k8s_ingress_service_nodeport = "${var.k8s_ingress_service_nodeport}"
+  k8s_workers_asg_names        = "${var.k8s_workers_asg_names}"
 
   vpces_acceptance_required = "${var.vpces_acceptance_required}"
   vpces_allowed_principals  = "${var.vpces_allowed_principals}"
