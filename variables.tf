@@ -7,7 +7,7 @@ variable "nlb_name" {
 }
 
 variable "nlb_subnets" {
-  type        = "list"
+  type        = list(string)
   description = "A list of subnet IDs to attach to the LB"
 }
 
@@ -20,7 +20,7 @@ variable "k8s_ingress_service_nodeport" {
 }
 
 variable "k8s_workers_asg_names" {
-  type        = "list"
+  type        = list(string)
   description = "Names of the autoscaling groups containing workers"
 }
 
@@ -30,12 +30,12 @@ variable "vpces_acceptance_required" {
 }
 
 variable "vpces_allowed_principals" {
-  type        = "list"
+  type        = list(string)
   description = "The ARNs of one or more principals allowed to discover the endpoint service"
   default     = []
 }
 
 variable "common_tag" {
-  type        = "map"
+  type        = map(string)
   description = "Tags to be assigned to each resource (that supports tagging) created by this module"
 }
